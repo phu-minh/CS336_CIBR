@@ -16,12 +16,12 @@ import cv2
 
 # construct the argument parser and parse the argument
 ap = argparse.ArgumentParser()
-# ap.add_argument("-d", "--dataset", required = True, help = "Path to the directory of indexed images")
+ap.add_argument("-d", "--dataset", required = True, help = "Path to the directory of indexed images")
 ap.add_argument("-f", "--features_db", required = True, help = "Path to the feature database")
 ap.add_argument("-b", "--bovw_db", required = True, help = "Path to the bag-of-visual-words database")
 ap.add_argument("-c", "--codebook", required = True, help = "Path to the codebook")
 ap.add_argument("-i", "--idf", type = str, help = "Path to inverted document frequencies array")
-# ap.add_argument("-r", "--relevant", required = True, help = "Path to the relevant dictionary")
+#ap.add_argument("-r", "--relevant", required = True, help = "Path to the relevant dictionary")
 ap.add_argument("-q", "--query", required = True, help = "Path to the query image")
 args = vars(ap.parse_args())
 
@@ -51,7 +51,7 @@ queryFilename = args["query"][args["query"].rfind("/") + 1:]
 
 # load the query image and process it
 queryImage = cv2.imread(args["query"])
-cv2.imshow("Query", imutils.resize(queryImage, width = 320))
+#cv2.imshow("Query", imutils.resize(queryImage, width = 320))
 queryImage = imutils.resize(queryImage, width = 320)
 queryImage = cv2.cvtColor(queryImage, cv2.COLOR_BGR2GRAY)
 
@@ -65,6 +65,7 @@ searcher = Searcher(redisDB, args["bovw_db"], args["features_db"], idf = idf,
     distanceMetric = distanceMetric)
 sr = searcher.search(hist, numResults = 20)
 print("[INFO] search took: {:.2f}s".format(sr.search_time))
+
 
 # initialize the results montage
 montage = ResultsMontage((240, 320), 5, 20)
@@ -81,14 +82,15 @@ for (i, (score, resultID, resultsIdx)) in enumerate(sr.results):
 import csv
   
 # field names
-fields = ['Path', 'Score']
+fields = ['Path', 'Cosine_Score']
   
 # data rows of csv file
 rows = [[path,score] for score,path,_ in sr.results]
   
 # name of csv file
 filename = "results.csv"
-  
+
+
 # writing to csv file
 with open(filename, 'w') as csvfile:
     # creating a csv writer object
