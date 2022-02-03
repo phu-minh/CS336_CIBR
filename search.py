@@ -87,7 +87,7 @@ fields = ['Path', 'Score']
 rows = [[path,score] for score,path,_ in sr.results]
   
 # name of csv file
-filename = "/content/results.csv"
+filename = "results.csv"
   
 # writing to csv file
 with open(filename, 'w') as csvfile:
