@@ -38,3 +38,13 @@ For full version: [Youtube](https://youtu.be/ihauPs-j5EI)
 ## Weights Folder
 
 Gdrive Folder: [Drive](https://drive.google.com/drive/folders/1obF0H9-aYWFcaIoCF4PaDlmA0dFF8qUM?usp=sharing)
+
+## Member
+
+Phan Nhật Minh 
+
+Phạm Viết Tài
+
+Nguyễn Minh Phú
+
+Nguyễn Văn Chính
