@@ -28,3 +28,7 @@ SciPy
 Streamlit
 
 Streamlit-cropper
+
+## Demo
+
+![alt-text](demo)
