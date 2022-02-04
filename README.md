@@ -1,4 +1,4 @@
-# Content Base Information Retrieval
+# Content Based Information Retrieval
  
 For usage, go to Notebook, download the notebook inside and run it on Google Colaboratory. 
 
