@@ -34,3 +34,7 @@ Streamlit-cropper
 ![demo](demo.gif)
 
 For full version: [Youtube](https://youtu.be/ihauPs-j5EI)
+
+## Weights Folder
+
+Gdrive Folder: [Drive](https://drive.google.com/drive/folders/1obF0H9-aYWFcaIoCF4PaDlmA0dFF8qUM?usp=sharing)
