@@ -31,4 +31,6 @@ Streamlit-cropper
 
 ## Demo
 
-![alt-text](demo)
+![demo](demo)
+
+For full version: ![Youtube](https://youtu.be/ihauPs-j5EI)
