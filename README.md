@@ -1,4 +1,4 @@
-# image_search_engine
+# Content Base Information Retrieval
  
 For usage, go to Notebook, downalod the notebook inside and run it on Google Colaboratory. 
 
